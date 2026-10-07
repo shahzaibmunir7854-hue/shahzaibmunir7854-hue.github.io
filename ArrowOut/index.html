@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrow Out : Big Reward — Untangle every arrow</title>
+  <meta name="description" content="A colorful arrow escape puzzle, one satisfying tap at a time. Explore Arrow Out : Big Reward, learn how to play, and clear a path for every arrow.">
+  <meta name="theme-color" content="#f7f7ef">
+  <link rel="icon" href="icon.png" type="image/png">
+  <style>
+:root{--ink:#28233e;--paper:#f7f7ef;--muted:#73717a;--green:#bfee66;--purple:#7657ed;--line:#ddded4}
+*{box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:25px}
+body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}button{font:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid #6845e6;outline-offset:5px}
+.wrap{width:min(1240px,calc(100% - 96px));margin-inline:auto}
+.header{height:112px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;gap:11px;align-items:center;text-decoration:none;font-size:21px;letter-spacing:-.8px;font-weight:800}
+.brand img{width:44px;height:44px;border-radius:11px}
+.brand-sub{display:block;font-size:9px;letter-spacing:3.9px;margin-top:5px}
+.header nav{display:flex;gap:34px;font-size:13px;font-weight:600}
+.header nav a{text-decoration:none}
+.header nav a:hover,.text-link:hover{color:var(--purple)}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:20px 25px;border-radius:11px;text-decoration:none;font-size:14px;font-weight:700;transition:transform .2s,background .2s}
+.button:hover{transform:translateY(-3px);background:#48405e}
+.button span{font-size:21px}
+.button.small{padding:13px 19px}
+.dark{background:var(--ink);color:white}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;min-height:640px;gap:35px;padding-top:35px;padding-bottom:70px}
+.eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:750;line-height:1.7}
+.live-dot{width:7px;height:7px;display:inline-block;background:#68a234;border-radius:50%;margin-right:8px}
+.hero h1{font-size:clamp(50px,5.6vw,79px);letter-spacing:-4.5px;line-height:1.035;margin:29px 0 25px;font-weight:800}
+.highlight{position:relative;z-index:0;white-space:nowrap}
+.highlight:after{content:'';position:absolute;z-index:-1;left:-4px;right:-7px;bottom:3px;height:24px;background:var(--green);transform:rotate(-2deg);border-radius:3px}
+.green{color:#6b963b}
+.lead{font-size:16px;line-height:1.8;color:var(--muted);max-width:360px}
+.hero-actions{display:flex;align-items:center;gap:20px;margin-top:30px}
+.hero-note{display:flex;gap:14px;align-items:center;margin-top:36px;font-size:11px;line-height:1.6;color:var(--muted)}
+.hero-note strong{color:var(--ink);font-weight:500}
+.mini-tiles{display:flex;padding-left:5px}
+.mini-tiles i{font-style:normal;width:29px;height:33px;display:grid;place-items:center;background:#8263f0;color:white;border-radius:12px;margin-left:-5px;font-size:18px}
+.mini-tiles i:nth-child(2){background:#e99248}.mini-tiles i:nth-child(3){background:#94bc57}
+.hero-art{position:relative;padding:20px 0 20px 10px}
+.hero-art:before{content:'';position:absolute;inset:8% -4% 0 0;background:#e9e4fc;border-radius:50%;transform:rotate(-20deg)}
+.icon-card{position:relative;background:#fff;border:1px solid #e1ddef;border-radius:26px;padding:28px;box-shadow:0 20px 70px #42337112;transform:rotate(-3deg);text-align:center}
+.icon-card img{width:70%;max-width:300px;border-radius:22%}
+.icon-card p{font-size:11px;color:var(--muted);line-height:1.7;margin:18px 0 0}
+.floating-note{position:absolute;right:-19px;bottom:1px;background:var(--green);padding:16px 23px 16px 43px;transform:rotate(6deg);border-radius:12px;font-size:16px;font-weight:700;box-shadow:0 6px 0 #a4ce58}
+.floating-note>span:first-child{position:absolute;left:14px;top:19px;font-size:23px}
+.note-sub{display:block;font-weight:400;font-size:10px;margin-top:5px}
+.spark{position:absolute;z-index:2;color:var(--purple)}
+.spark-one{font-size:58px;top:-17px;right:-13px;transform:rotate(15deg)}
+.spark-two{font-size:66px;left:-26px;bottom:21px;color:#98ba5b}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ticker .wrap{display:flex;justify-content:space-between;gap:20px;padding-block:23px;flex-wrap:wrap}
+.ticker span{display:flex;align-items:center;gap:40px;font-size:10px;font-weight:750;letter-spacing:1.6px}
+.ticker b{color:#9bba67;font-size:23px;font-weight:400}
+.section{padding-block:96px}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:50px;margin-bottom:45px}
+.section-heading .eyebrow{color:#81709e;margin-top:0}
+h2{font-size:45px;line-height:1.13;letter-spacing:-2px;margin:16px 0 0}
+h3{font-size:21px;letter-spacing:-.6px;margin:13px 0}
+.section-heading>p{max-width:300px;color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:4px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.steps article>p{font-size:13px;line-height:1.8;color:var(--muted);max-width:295px}
+.step-art{height:170px;border-radius:17px;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:25px}
+.step-one{background:#eee9fa}.step-two{background:#f6eadd}.step-three{background:#eaf0da}
+.step-number{color:#8c8599;font-size:9px;letter-spacing:2px}
+.boost-section{background:#eeecf5;padding:78px 0}
+.boosters{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.booster{background:var(--paper);border:1px solid #e4e0ed;border-radius:16px;padding:28px;position:relative}
+.power-icon{display:grid;place-items:center;width:59px;height:64px;background:#eee7dc;border-radius:15px;font-size:35px;margin-bottom:26px}
+.booster .eyebrow{font-size:8px;color:var(--muted);letter-spacing:1.2px}
+.booster h3{font-size:25px;margin-top:8px}
+.booster p{color:var(--muted);font-size:13px;line-height:1.8}
+.card-arrow{position:absolute;top:31px;right:26px;font-size:21px;color:#b0a8bc}
+.faq-section{display:grid;grid-template-columns:1fr 1.2fr;gap:80px}
+.text-link{display:inline-flex;gap:24px;margin-top:28px;font-size:12px;text-underline-offset:6px}
+.faqs details{padding:23px 0;border-bottom:1px solid var(--line)}
+.faqs details:first-child{border-top:1px solid var(--line)}
+.faqs summary{font-size:14px;font-weight:700;cursor:pointer;list-style:none;padding-right:25px;position:relative}
+.faqs summary::-webkit-details-marker{display:none}
+.faqs summary:after{content:'+';position:absolute;right:2px;font-weight:400;font-size:18px;top:-3px}
+.faqs details[open] summary:after{content:'−'}
+.faqs p{font-size:13px;color:var(--muted);line-height:1.9;margin:15px 15px 0 0}
+.faqs a{text-underline-offset:3px}
+.cta{background:var(--green);border-radius:24px;display:flex;justify-content:space-between;align-items:center;gap:30px;padding:52px 60px;position:relative;overflow:hidden}
+.cta h2{font-size:48px}
+.cta p:not(.eyebrow){font-size:13px;line-height:1.8}
+.cta-action{position:relative;z-index:1}
+.cta-action p{font-size:11px!important;opacity:.85;text-align:center}
+.cta-spark{position:absolute;bottom:-80px;left:49%;font-size:250px;line-height:1;color:#a9d851;transform:rotate(10deg)}
+footer{padding-top:64px;padding-bottom:25px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-bottom:37px;border-bottom:1px solid var(--line)}
+.footer-top>div{display:flex;gap:27px;font-size:12px}
+.footer-top>div a{text-decoration:none}
+.footer-top>div a:hover{color:var(--purple)}
+.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:22px;font-size:10px;color:var(--muted)}
+@media(max-width:1000px){.wrap{width:calc(100% - 56px)}.header nav{gap:20px}.hero{gap:26px}.hero h1{font-size:58px;letter-spacing:-3px}h2{font-size:37px}.faq-section{gap:35px}.cta{padding:38px}.cta h2{font-size:40px}}
+@media(max-width:700px){.wrap{width:calc(100% - 40px)}.header{height:85px}.header nav{display:none}.brand{font-size:17px}.brand img{width:36px;height:36px}
+.hero{grid-template-columns:1fr;padding-top:24px;padding-bottom:62px;gap:42px}
+.hero h1{font-size:clamp(48px,11.8vw,72px);letter-spacing:-3px}
+.hero-art{max-width:470px;width:100%;margin:auto;padding:10px}
+.floating-note{right:0}.spark-two{left:-10px}
+.section{padding-block:60px}.section-heading{display:block;margin-bottom:30px}.section-heading>p{margin-top:20px}
+h2{font-size:36px;letter-spacing:-1.5px}.steps{grid-template-columns:1fr}.boosters{grid-template-columns:1fr}
+.faq-section{grid-template-columns:1fr}.cta{padding:32px 26px;display:block}.cta h2{font-size:38px}.cta-action{margin-top:26px}
+.footer-top{align-items:flex-start;flex-direction:column}.footer-bottom{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="header wrap">
+  <a class="brand" href="index.html" aria-label="Arrow Out : Big Reward home"><img src="icon.png" alt=""><span>arrow out<span class="brand-sub">BIG REWARD</span></span></a>
+  <nav aria-label="Main navigation"><a href="#how-to-play">How to play</a><a href="#features">In the game</a><a href="#faq">Good to know</a></nav>
+  <a class="button small dark" href="#faq">Learn more <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+<section class="hero wrap">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="live-dot"></span> SMALL TAPS. SATISFYING ESCAPES.</p>
+    <h1>A little puzzle.<br>A <span class="highlight">big way</span><br>to unwind<span class="green">.</span></h1>
+    <p class="lead">Find a clear path. Follow each arrow's head. Untangle the colorful arrows and give every arrow a clear way out.</p>
+    <div class="hero-actions">
+      <a class="button dark" href="#how-to-play">See how to play <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-note"><span class="mini-tiles" aria-hidden="true"><i>↗</i><i>↑</i><i>↖</i></span><span>Easy to pick up.<br><strong>Lovely to figure out.</strong></span></div>
+  </div>
+  <div class="hero-art">
+    <span class="spark spark-one" aria-hidden="true">✳</span><span class="spark spark-two" aria-hidden="true">✧</span>
+    <div class="icon-card">
+      <img src="icon.png" alt="Arrow Out : Big Reward game icon">
+      <p>Tap the arrows whose heads point to an open path.<br>Clear the board. Feel great.</p>
+    </div>
+    <div class="floating-note"><span aria-hidden="true">✦</span> One more tap?<span class="note-sub">We know the feeling.</span></div>
+  </div>
+</section>
+<div class="ticker" aria-label="Game highlights"><div class="wrap"><span>THINK A LITTLE <b>✳</b></span><span>TAP IT OUT <b>✳</b></span><span>FIND YOUR FLOW <b>✳</b></span><span>ENJOY THE LITTLE WINS <b>✳</b></span></div></div>
+<section class="section wrap" id="how-to-play">
+  <div class="section-heading"><div><p class="eyebrow">THE SIMPLE PART</p><h2>Your next move?<br>Follow the arrowheads.</h2></div><p>No complicated controls. Just a board full of possibilities and a little room to think.</p></div>
+  <div class="steps">
+    <article><div class="step-art step-one" aria-hidden="true"><svg width="220" height="140" viewBox="0 0 220 140"><path d="M40 110H85V55H175M153 33 175 55 153 77" stroke="#9564dc" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="step-number">01 / LOOK</span><h3>Find a clear path</h3><p>Each arrow moves in the direction its head faces. Check the space ahead before you tap.</p></article>
+    <article><div class="step-art step-two" aria-hidden="true"><svg width="220" height="140" viewBox="0 0 220 140"><path d="M40 110H85V55H175M153 33 175 55 153 77" stroke="#eaa349" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="step-number">02 / TAP</span><h3>Send it on its way</h3><p>Tap an arrow with a clear path and watch it slide out. If another arrow blocks it, free the blocker first.</p></article>
+    <article><div class="step-art step-three" aria-hidden="true"><svg width="220" height="140" viewBox="0 0 220 140"><path d="M40 110H85V55H175M153 33 175 55 153 77" stroke="#83b74d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="step-number">03 / CLEAR</span><h3>Make room for a win</h3><p>Untangle the paths until every arrow has escaped. Take a breath. Ready for another?</p></article>
+  </div>
+</section>
+<section class="boost-section" id="features"><div class="wrap">
+  <div class="section-heading"><div><p class="eyebrow">MORE LITTLE REASONS TO PLAY</p><h2>A board of possibilities.<br>A thoughtful escape.</h2></div><p>Meet the little details that make every board its own puzzle.</p></div>
+  <div class="boosters">
+    <article class="booster"><span class="power-icon" aria-hidden="true">✨</span><div><span class="eyebrow">A LITTLE HELP</span><h3>Handy boosters</h3><p>Make room when you need it.<br>Help clear arrows from the board.</p></div><span class="card-arrow" aria-hidden="true">↗</span></article>
+    <article class="booster"><span class="power-icon" aria-hidden="true">♡</span><div><span class="eyebrow">THINK BEFORE YOU TAP</span><h3>Lives that matter</h3><p>Blocked moves can cost a heart.<br>Look ahead and choose your path.</p></div><span class="card-arrow" aria-hidden="true">↗</span></article>
+    <article class="booster"><span class="power-icon" aria-hidden="true">✳</span><div><span class="eyebrow">A FRESH PERSPECTIVE</span><h3>Colorful patterns</h3><p>Bent paths. Bright, bold arrows.<br>A new tangle to make sense of.</p></div><span class="card-arrow" aria-hidden="true">↗</span></article>
+  </div>
+</div></section>
+<section class="section wrap faq-section" id="faq">
+  <div><p class="eyebrow">BEFORE YOU TAP IN</p><h2>A few things<br>worth knowing.</h2><a class="text-link" href="privacy.html">Read our privacy policy <span aria-hidden="true">↗</span></a></div>
+  <div class="faqs">
+    <details open><summary>What kind of game is this?</summary><p>Arrow Out : Big Reward is an arrow-escape puzzle. Each level is a tangle of colorful arrows — tap them in the right order so every one finds a clear way out.</p></details>
+    <details><summary>Who is the game for?</summary><p>Arrow Out : Big Reward is intended for adults aged 18 and older, as described in our <a href="terms.html">User Agreement</a>.</p></details>
+    <details><summary>How do rewards work?</summary><p>The game may offer reward opportunities for entertainment. Rewards are not guaranteed income and may change or be discontinued. See the game for current availability and read the <a href="terms.html">User Agreement</a> for details.</p></details>
+    <details><summary>How is my information handled?</summary><p>Our <a href="privacy.html">Privacy Policy</a> explains the information the app may collect, how it is used, and how it is shared with service providers.</p></details>
+  </div>
+</section>
+<section class="wrap"><div class="cta">
+  <div><p class="eyebrow">MAKE A LITTLE SPACE FOR PLAY</p><h2>Your next escape<br>starts with a tap.</h2><p>Arrow Out : Big Reward</p></div>
+  <div class="cta-action"><a class="button dark" href="#how-to-play">Find your next move <span aria-hidden="true">↗</span></a><p>A moment to focus. A little room to breathe.</p></div>
+  <span class="cta-spark" aria-hidden="true">✳</span>
+</div></section>
+</main>
+<footer class="wrap">
+  <div class="footer-top">
+    <a class="brand" href="index.html"><img src="icon.png" alt=""><span>arrow out<span class="brand-sub">BIG REWARD</span></span></a>
+    <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">User Agreement</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year">2026</span> Arrow Out : Big Reward</span><span>18+ · Play for enjoyment. Rewards are not guaranteed.</span></div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
