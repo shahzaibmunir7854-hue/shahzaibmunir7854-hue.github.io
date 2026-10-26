@@ -1772,4 +1772,4 @@ smartadserver.com, 3964, RESELLER
 pubmatic.com, 161151, RESELLER, 5d62403b186f2ace
 appnexus.com, 17779, RESELLER
 
-
+vungle.com, 6adf61d5432de742530a68dc, DIRECT, c107d686becd2d77
