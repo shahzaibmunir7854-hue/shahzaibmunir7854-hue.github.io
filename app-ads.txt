@@ -2452,3 +2452,19 @@ vdo.ai, 5995, RESELLER
 app-stock.com, 731135, RESELLER
 beapup.com, 583299, RESELLER
 clistltd.com, 431132, RESELLER
+loopme.com, 18649, DIRECT, 6c8d5f95897a5a3b
+smartadserver.com, 4868, RESELLER, 060d053dcf45cbf3
+adyoulike.com, 1886eb91ab89bb09c703b18910509154, RESELLER
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+motorik.io, 100463, RESELLER
+contextweb.com, 558511, RESELLER, 89ff185a4c4e857c
+improvedigital.com, 2604, RESELLER
+lijit.com, 548876, RESELLER, fafdf38b16bf6b2b
+video.unrulymedia.com, 2444764291, RESELLER
+pgamssp.com, 6720eaffd76cc4dc1f00de26, RESELLER
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+programmaticx.ai, 6654983, RESELLER, b42d42eb28400efa
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+smartadserver.com, 4926, RESELLER, 060d053dcf45cbf3
+appnexus.com, 1019, RESELLER, f5ab79cb980f11d1
+axonix.com, 59202, RESELLER
