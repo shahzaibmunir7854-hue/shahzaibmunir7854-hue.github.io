@@ -2468,3 +2468,15 @@ pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
 smartadserver.com, 4926, RESELLER, 060d053dcf45cbf3
 appnexus.com, 1019, RESELLER, f5ab79cb980f11d1
 axonix.com, 59202, RESELLER
+openx.com, 540543195, RESELLER, 6a698e2ec38604c6
+smartadserver.com, 6058, RESELLER, 060d053dcf45cbf3
+triplelift.com, 14867, RESELLER, 6c33edb13117fd86
+triplelift.com, 14923, RESELLER , 6c33edb13117fd86
+triplelift.com, 14919, RESELLER, 6c33edb13117fd86
+rubiconproject.com, 27945, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 28945, RESELLER, 0bfd66d529a55807
+toponad.com, 16aec6880be2e7, RESELLER
+pubnative.net, 1018435, RESELLER, d641df8625486a7b
+appnexus.com, 18183, RESELLER, f5ab79cb980f11d1
+smaato.com, 1100060389, RESELLER, 07bcf65f187117b4
+adingo.jp, 34964, RESELLER
